@@ -1,3 +1,121 @@
 @import "fonts.css";
 @import "normalize.css";
 @import "reset.css";
+body {
+  font-family: 'montserratregular';
+  background: #060606;
+}
+.site-wrapper {
+  width: 1366px;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.site-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+}
+.navbar {
+  padding: 0 52px;
+}
+.navbar .navbar-brand {
+  position: relative;
+  left: 10px;
+  top: -5px;
+}
+.navbar .navbar-collapse {
+  padding: 19px 13px 0;
+}
+.navbar .nav-item .nav-link {
+  border-bottom: 3px solid transparent;
+  color: #060606;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+.navbar .nav-item .nav-link:hover {
+  border-bottom: 3px solid #FFA800;
+  color: #060606;
+}
+@media (max-width: 1163px) {
+  #navbar {
+    display: none !important;
+  }
+  .navbar-toggler {
+    display: inline-block !important;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbar-collapse {
+    padding: 0;
+  }
+  .navbar .navbar-nav {
+    text-align: center;
+    height: 100vh;
+  }
+  .nav-item .nav-link {
+    margin: 10px 0px;
+    border-bottom: 1px solid #060606;
+  }
+}
+@media (max-width: 350px) {
+  .navbar {
+    padding: 0 0;
+  }
+  .navbar-brand {
+    display: none;
+  }
+}
+.lang {
+  color: #060606;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+.site-footer {
+  background-color: #2F4858;
+  color: #fff;
+  padding: 0 56px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.site-footer .nav-item {
+  line-height: 22px;
+  line-height: 100%;
+  align: left;
+  vertical-align: top;
+}
+.site-footer .nav-item a {
+  color: #fff;
+  border: none;
+}
+.site-footer h1 {
+  font-size: 24px;
+  line-height: 29px;
+  line-height: 100%;
+}
+.site-footer li {
+  line-height: 22px;
+  line-height: 100%;
+}
+.SocialMedia .nav-item {
+  margin: 0 10px;
+}
+.Copyright {
+  font-size: 14px;
+  line-height: 17px;
+}
+.Copyright .justify-content-end {
+  text-align: right;
+}
+.Copyright a {
+  color: #fff;
+}
