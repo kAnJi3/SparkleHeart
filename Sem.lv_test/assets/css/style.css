@@ -6,13 +6,16 @@ body {
   background: #060606;
 }
 .site-wrapper {
-  width: 1366px;
+  width: 100%;
   z-index: 1;
   overflow: hidden;
   position: relative;
 }
+/* Header */
 .site-header {
+  width: 100%;
   position: fixed;
+  z-index: 1;
   top: 0px;
   left: 0px;
   background: #FFF;
@@ -36,12 +39,18 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
+  margin: 0 0.5em;
 }
 .navbar .nav-item .nav-link:hover {
   border-bottom: 3px solid #FFA800;
   color: #060606;
 }
-@media (max-width: 1163px) {
+@media (min-width: 1366px) {
+  .navbar-nav {
+    margin-left: 2.5em;
+  }
+}
+@media (max-width: 1280px) {
   #navbar {
     display: none !important;
   }
@@ -62,6 +71,10 @@ body {
     margin: 10px 0px;
     border-bottom: 1px solid #060606;
   }
+  .lang a:active {
+    border-bottom: 3px solid #FFA800;
+    color: #060606;
+  }
 }
 @media (max-width: 350px) {
   .navbar {
@@ -72,12 +85,87 @@ body {
   }
 }
 .lang {
-  color: #060606;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
 }
+.lang a {
+  color: #060606;
+}
+.site-content {
+  width: 100%;
+  position: relative;
+}
+/* Home */
+#PlayButton {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.Home {
+  width: 100%;
+  min-height: 172px;
+  height: 100vh;
+  position: relative;
+  display: table;
+  padding-top: 55px;
+  background-image: url(../img/Sparkle_Video_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/*About Us */
+.About {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 62px;
+  min-height: 286px;
+  background: #fff;
+}
+.About p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  color: #2F4858;
+  margin: 5em 1em 3em;
+}
+@media (min-width: 1366px) {
+  .About p {
+    margin: 250px 4em 210px 5em;
+  }
+}
+/* Gallery */
+.Gallery {
+  margin: 20px 0;
+  position: relative;
+}
+.Gallery img {
+  width: 100%;
+}
+.Gallery:before,
+.Gallery:after {
+  content: "a";
+  color: transparent;
+  position: absolute;
+  background: url(../img/ripped_6.png);
+  background-size: contain;
+  width: 100%;
+  z-index: 1;
+}
+.Gallery:before {
+  transform: rotate(180deg);
+}
+.Gallery:after {
+  bottom: -10px;
+}
+/* Footer */
 .site-footer {
   background-color: #2F4858;
   color: #fff;
