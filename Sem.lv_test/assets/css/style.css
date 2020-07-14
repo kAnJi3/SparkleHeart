@@ -15,7 +15,7 @@ body {
 .site-header {
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0px;
   left: 0px;
   background: #FFF;
@@ -50,7 +50,7 @@ body {
     margin-left: 2.5em;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   #navbar {
     display: none !important;
   }
@@ -67,9 +67,12 @@ body {
     text-align: center;
     height: 100vh;
   }
-  .nav-item .nav-link {
+  .navbar .nav-item .nav-link {
     margin: 10px 0px;
-    border-bottom: 1px solid #060606;
+    font-size: 24px;
+  }
+  .lang {
+    display: none;
   }
   .lang a:active {
     border-bottom: 3px solid #FFA800;
@@ -108,7 +111,7 @@ body {
 .Home {
   width: 100%;
   min-height: 172px;
-  height: 100vh;
+  height: 769px;
   position: relative;
   display: table;
   padding-top: 55px;
@@ -136,14 +139,14 @@ body {
   color: #2F4858;
   margin: 5em 1em 3em;
 }
-@media (min-width: 1366px) {
+@media (min-width: 1365px) {
   .About p {
     margin: 250px 4em 210px 5em;
   }
 }
 /* Gallery */
 .Gallery {
-  margin: 20px 0;
+  padding: 13px 0px;
   position: relative;
 }
 .Gallery img {
@@ -163,22 +166,154 @@ body {
   transform: rotate(180deg);
 }
 .Gallery:after {
-  bottom: -10px;
+  bottom: 14px;
+}
+/* Dreams */
+.Dreams {
+  padding: 0 56px;
+}
+.Dreams .row {
+  margin: 138px 96px;
+}
+.Dreams h3 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #2F4858;
+  margin-bottom: 54px;
+}
+.link-button {
+  color: #fff;
+  display: inline-block;
+  padding: 14px 0;
+  background-color: #FFA800;
+  border-radius: 30px;
+  width: 233px;
+  height: 50px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+.link-button:active {
+  background-color: #FF8A00;
+}
+.link-button:hover {
+  background-color: #FFDA16;
+}
+/* Contact-us */
+.Contact-us {
+  padding: 19px 52px;
+  color: #2F4858;
+}
+.Contact-us h2 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #2F4858;
+  margin-bottom: 54px;
+}
+.Contact-us ::placeholder {
+  color: #2F4858;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+}
+.Contact-us form {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.Contact-us form textarea {
+  height: 232px;
+  margin: -5px 0 10px 0;
+  word-spacing: 2px;
+  padding: 0.5rem 0.75rem;
+  resize: none;
+}
+.Contact-us form label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+.Contact-us .custom-control {
+  margin: 0 0 3.05em 0.2em;
+  padding-top: 7px;
+}
+.Contact-us .custom-control-label {
+  padding: 5px 0 0 10px;
+}
+.form-button {
+  border: none;
+  color: #fff;
+  display: inline-block;
+  padding: 14px 0;
+  background-color: #FFA800;
+  border-radius: 30px;
+  width: 182px;
+  height: 62px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  vertical-align: middle;
+}
+.form-button:active {
+  background-color: #FF8A00;
+}
+.form-button:hover {
+  background-color: #FFDA16;
+}
+/* Supported-by */
+.Supported-by {
+  padding: 101px 52px 143px;
+  background: #FFCB66;
+  text-align: center;
+  margin-top: 81px;
+}
+.Supported-by h3 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #2F4858;
+  margin-bottom: 82px;
 }
 /* Footer */
 .site-footer {
   background-color: #2F4858;
   color: #fff;
-  padding: 0 56px;
+  padding: 40px 65px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
 }
+.site-footer .col-lg-2 .nav {
+  margin-top: -13px;
+}
+.site-footer .col-lg-2 .nav .nav-item {
+  margin: 0;
+}
+.site-footer .col-lg-2 .nav .nav-link {
+  margin-top: 13px;
+  padding: 0 0 13px 0px;
+}
 .site-footer .nav-item {
   line-height: 22px;
   line-height: 100%;
-  align: left;
   vertical-align: top;
 }
 .site-footer .nav-item a {
@@ -189,17 +324,26 @@ body {
   font-size: 24px;
   line-height: 29px;
   line-height: 100%;
+  margin-bottom: 18px;
 }
 .site-footer li {
+  margin: 16px 0;
   line-height: 22px;
   line-height: 100%;
 }
+.SocialMedia {
+  margin: 3em -14px 0 0;
+}
 .SocialMedia .nav-item {
-  margin: 0 10px;
+  margin: 0 13px;
+}
+.SocialMedia .nav-item .nav-link {
+  padding: 0 1rem 0.5rem 0;
 }
 .Copyright {
   font-size: 14px;
   line-height: 17px;
+  margin-top: 3px;
 }
 .Copyright .justify-content-end {
   text-align: right;
