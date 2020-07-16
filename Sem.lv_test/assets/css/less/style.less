@@ -9,7 +9,6 @@
 body {
 
   font-family: 'Montserrat', sans-serif;
-  background: #060606;
 }
 .site-wrapper {
   width: 100%;
@@ -35,7 +34,7 @@ body {
     background: url(../img/header_ripped.png);
     background-position: center center;
     width: 100%;
-    z-index: 10000;
+    z-index: 101;
     bottom: -10px;
   }
 }
@@ -132,6 +131,11 @@ body {
 }
 @media(max-width:768px) {
 
+  .navbar .nav-item .nav-link {
+    margin: 10px 0px;
+    font-size: 18px;
+  }
+
   .site-header {
     &:after {
       background-position: left;
@@ -199,7 +203,7 @@ body {
   position: fixed;
   bottom: 25px;
   right:25px;
-  z-index: 100001;
+  z-index: 99;
   a {
     display: inline-block;
     background-color: #FFA800;
@@ -263,7 +267,6 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-
   .Gallery-item {
     flex: 25%;
     position: relative;
@@ -300,6 +303,25 @@ body {
       flex: 50%;
       height:184px;
     }
+    &:before, &:after {
+      background-size: cover;
+    }
+  }
+}
+@media(min-width: 1025px) {
+  .Gallery-item {
+    &:nth-child(1) {
+      flex: 24.011713030746705710102489019034%;
+    }
+    &:nth-child(2) {
+      flex: 24.450951683748169838945827232796%
+    }
+    &:nth-child(3) {
+      flex: 21.81551976573938506588579795022%;
+    }
+    &:nth-child(4) {
+      flex: 29.72181551976573938506588579795%;
+    }
   }
 }
 /* Dreams */
@@ -329,6 +351,7 @@ body {
 @media(max-width: 768px) {
   .Dreams {
     padding:0 2em;
+    margin-top: 7rem;
     .row {
       margin: 3em 0;
 
@@ -359,7 +382,7 @@ body {
 @media(min-width: 1167px) {
   .Dreams {
     .row {
-      margin: 10.611em 5.33333em 7.66666em; // 191px
+      margin: 10.722em 5.33333em 7.66666em; // 191px
     }
   }
 }
@@ -433,7 +456,7 @@ body {
     padding-top: 7px;
   }
   .custom-control-label {
-    padding: 5px 0 0 10px;
+    padding: 4px 0 1px 11px;
   }
 }
 @media(max-width: 480px) {
@@ -444,6 +467,7 @@ body {
 }
 @media(max-width:768px) {
   .Contact-us {
+    margin-top: 10rem;
     padding: 0.5rem 1.75rem 1.5rem;
   }
 }
@@ -478,12 +502,15 @@ body {
 .Supported-by {
 
   background: #FFCB66;
-  padding: 73px 52px 140px;
+  padding: 73px 65px 137px;
   position: relative;
   text-align: center;
   margin-top: 81px;
   position: relative;
 
+  .row {
+    padding-right: 10px;
+  }
   &:before {
     content: "a";
     color: transparent;
@@ -524,12 +551,16 @@ body {
 .site-footer {
   background-color: #2F4858;
   color: #fff;
-  padding:44px 65px 2em;
+  padding:46px 62px 2em;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   position: relative;
+
+  .extra-margin {
+    margin:0 3rem 0 2.8rem;
+  }
 
   &:before {
     content: "a";
@@ -552,12 +583,12 @@ body {
         padding:0 0 13px 0px;
       }
     }
+
   }
 
   .nav-item {
 
     line-height: 22px;
-    line-height: 100%;
     vertical-align: top;
     a {
       color: #fff;
@@ -568,13 +599,12 @@ body {
     font-size: 1.333rem;
     line-height: 29px;
     line-height: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
   }
   li {
-    margin: 16px 0;
+    margin: 11px 0;
     line-height: 22px;
-    line-height: 100%;
   }
   .flex-column {
     a {
@@ -583,10 +613,18 @@ body {
         border-bottom: 3px solid #FFA800;
       }
     }
+    .nav-item .nav-link {
+      margin-top: 14px;
+      padding:0 0 5px 0px ;
+    }
+  }
+  .SocialMedia .nav {
+    margin-top: -2px;
   }
 }
 .SocialMedia {
   margin: 3em -14px 0 0;
+
   .nav-item {
     margin:0 13px !important;
     .nav-link {
