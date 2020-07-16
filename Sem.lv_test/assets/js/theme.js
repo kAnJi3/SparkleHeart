@@ -11,3 +11,11 @@ $('#navbarToggle').click(function(){
     $('.navbar-nav').attr("style", "");
   }
 });
+$( window ).resize(function() {
+  if($( window ).width() > 1300 ) {
+    $('#navbar').attr("style", "");
+    $('.navbar').attr("style","");
+    $('#navbar .lang-mobile').attr("style", "");
+    $('.navbar-nav').attr("style", "");
+  }
+});
