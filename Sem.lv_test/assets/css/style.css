@@ -93,6 +93,7 @@ body {
   }
   .navbar-toggler {
     display: inline-block !important;
+    border: none;
   }
   .navbar {
     justify-content: space-between;
@@ -102,7 +103,6 @@ body {
   }
   .navbar .navbar-nav {
     text-align: center;
-    height: 100vh;
   }
   .navbar .nav-item .nav-link {
     margin: 10px 0px;
@@ -163,6 +163,28 @@ body {
 }
 .Homebg img {
   width: 100%;
+}
+.Scrolldown {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100001;
+}
+.Scrolldown a {
+  display: inline-block;
+  background-color: #FFA800;
+  border-radius: 50%;
+  width: 40px;
+  padding: 5px;
+  height: 40px;
+  text-align: center;
+  line-height: 30px;
+}
+.Scrolldown a:hover {
+  background-color: #2F4858;
+}
+.Scrolldown img {
+  transform: rotate(90deg);
 }
 /*About Us */
 .About {
@@ -261,6 +283,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .Dreams {
+    padding: 0 2em;
+  }
   .Dreams .row {
     margin: 3em 0;
   }
@@ -272,15 +297,18 @@ body {
     line-height: 27px;
   }
 }
-@media (min-width: 769px) and (max-width: 1159px) {
+@media (min-width: 769px) and (max-width: 1166px) {
   .Dreams .row {
     margin: 4em 0;
+  }
+  .Dreams .col-sm-6 {
+    padding: 0;
   }
   .Dreams h3 {
     font-size: 18px;
   }
 }
-@media (min-width: 1160px) {
+@media (min-width: 1167px) {
   .Dreams .row {
     margin: 10.611em 5.33333em 7.66666em;
   }
@@ -300,7 +328,6 @@ body {
   font-size: 1rem;
   line-height: 22px;
   vertical-align: middle;
-  transition: background-color 1s linear;
 }
 .link-button:active {
   background-color: #FF8A00;
@@ -386,6 +413,10 @@ body {
 }
 .form-button:hover {
   background-color: #FFDA16;
+}
+.link-button,
+.form-button {
+  transition: background-color 1s linear;
 }
 /* Supported-by */
 .Supported-by {
@@ -476,6 +507,12 @@ body {
   margin: 16px 0;
   line-height: 22px;
   line-height: 100%;
+}
+.site-footer .flex-column a {
+  border-bottom: 3px solid transparent;
+}
+.site-footer .flex-column a:hover {
+  border-bottom: 3px solid #FFA800;
 }
 .SocialMedia {
   margin: 3em -14px 0 0;

@@ -104,8 +104,8 @@ body {
   }
   .navbar-toggler {
     display:inline-block !important;
+    border: none;
   }
-
   .navbar {
     justify-content: space-between;
   }
@@ -115,7 +115,6 @@ body {
   }
   .navbar .navbar-nav {
     text-align: center;
-    height: 100vh;
   }
   .navbar .nav-item .nav-link {
     margin: 10px 0px;
@@ -194,6 +193,29 @@ body {
   position: relative;
   img {
     width: 100%;
+  }
+}
+.Scrolldown {
+  position: fixed;
+  bottom: 25px;
+  right:25px;
+  z-index: 100001;
+  a {
+    display: inline-block;
+    background-color: #FFA800;
+    border-radius: 50%;
+    width: 40px;
+    padding:5px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+
+    &:hover {
+      background-color: #2F4858;
+    }
+  }
+  img {
+    transform: rotate(90deg);
   }
 }
 /*About Us */
@@ -306,6 +328,7 @@ body {
 }
 @media(max-width: 768px) {
   .Dreams {
+    padding:0 2em;
     .row {
       margin: 3em 0;
 
@@ -319,10 +342,13 @@ body {
     }
   }
 }
-@media(min-width: 769px) and (max-width: 1159px) {
+@media(min-width: 769px) and (max-width: 1166px) {
   .Dreams {
     .row {
       margin: 4em 0;
+    }
+    .col-sm-6 {
+      padding:0;
     }
     h3 {
       font-size: 18px;
@@ -330,7 +356,7 @@ body {
     }
   }
 }
-@media(min-width: 1160px) {
+@media(min-width: 1167px) {
   .Dreams {
     .row {
       margin: 10.611em 5.33333em 7.66666em; // 191px
@@ -354,8 +380,6 @@ body {
   font-size: 1rem;
   line-height: 22px;
   vertical-align: middle;
-  transition: background-color 1s linear;
-
   &:active {
     background-color: #FF8A00;
   }
@@ -447,6 +471,9 @@ body {
     background-color: #FFDA16;
   }
 }
+.link-button, .form-button {
+  transition: background-color 1s linear;
+}
 /* Supported-by */
 .Supported-by {
 
@@ -514,7 +541,6 @@ body {
     top: -25px;
     left: 0px;
   }
-
   .col-lg-3 {
     .nav {
       margin-top:-13px;
@@ -549,6 +575,14 @@ body {
     margin: 16px 0;
     line-height: 22px;
     line-height: 100%;
+  }
+  .flex-column {
+    a {
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom: 3px solid #FFA800;
+      }
+    }
   }
 }
 .SocialMedia {
