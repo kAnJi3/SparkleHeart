@@ -123,15 +123,19 @@ body {
   .site-header:after {
     background-position: left;
   }
-  .navbar-brand img {
-    width: 75%;
+  .navbar .navbar-brand {
+    top: 0;
+    left: 28px;
+  }
+  .navbar .navbar-brand img {
+    width: 80%;
   }
 }
 @media (max-width: 350px) {
   .navbar {
     padding: 0 20px;
   }
-  .navbar-brand img {
+  .navbar .navbar-brand img {
     width: 50%;
   }
 }
@@ -148,6 +152,11 @@ body {
   padding-top: 47px;
   width: 100%;
   position: relative;
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .site-content {
+    padding-top: 72px;
+  }
 }
 /* Home */
 #PlayButton {
@@ -166,6 +175,20 @@ body {
 }
 .Homebg img {
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .Home:after {
+    content: "a";
+    color: transparent;
+    position: absolute;
+    background-image: url(../img/ripped_6.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    bottom: -5px;
+  }
 }
 .Scrolldown {
   position: fixed;
@@ -203,7 +226,7 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #2F4858;
-  margin: 5em 1em 3em;
+  margin: 6.8em 1em 3em;
 }
 @media (min-width: 1365px) {
   .About p {
@@ -217,9 +240,12 @@ body {
   }
   .About {
     padding: 0 20px;
+    min-height: auto;
   }
   .About p {
+    margin: 5em 0 4.6em;
     font-size: 12px;
+    line-height: 15px;
   }
 }
 /* Gallery */
@@ -238,6 +264,7 @@ body {
 .Gallery img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .Gallery:before,
 .Gallery:after {
@@ -319,6 +346,14 @@ body {
     line-height: 27px;
   }
 }
+@media (max-width: 480px) {
+  .Dreams h3 {
+    margin-bottom: 26px;
+  }
+  .Dreams .row .col-12 {
+    padding-bottom: 4rem;
+  }
+}
 @media (min-width: 769px) and (max-width: 1166px) {
   .Dreams .row {
     margin: 4em 0;
@@ -347,7 +382,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 22px;
   vertical-align: middle;
 }
@@ -396,23 +431,17 @@ body {
   font-size: 0.7778rem;
   line-height: 17px;
 }
+.Contact-us form .text-left {
+  margin-left: 3px;
+}
 .Contact-us .custom-control {
   margin: 0 0 3.05em 0.2em;
   padding-top: 7px;
 }
 .Contact-us .custom-control-label {
-  padding: 4px 0 1px 11px;
-}
-@media (max-width: 480px) {
-  .Contact-us form textarea {
-    height: 150px;
-  }
-}
-@media (max-width: 768px) {
-  .Contact-us {
-    margin-top: 10rem;
-    padding: 0.5rem 1.75rem 1.5rem;
-  }
+  padding: 4px 0 0 11px;
+  cursor: pointer;
+  user-select: none;
 }
 .form-button {
   border: none;
@@ -437,9 +466,32 @@ body {
 .form-button:hover {
   background-color: #FFDA16;
 }
+@media (max-width: 768px) {
+  .Contact-us {
+    margin-top: 10rem;
+    padding: 0.5rem 1.75rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .Contact-us {
+    margin-top: 4.3rem;
+  }
+  .Contact-us form textarea {
+    height: 150px;
+  }
+  .form-button {
+    width: 140px;
+    height: 48px;
+    line-height: 22px;
+    padding: 0;
+  }
+}
 .link-button,
 .form-button {
   transition: background-color 1s linear;
+}
+a:hover {
+  transition: border-color 0.5s linear;
 }
 /* Supported-by */
 .Supported-by {
@@ -478,16 +530,20 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .Supported-by h3 {
+    font-size: 24px;
+  }
   .Supported-by:before {
     top: -10px;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
   }
 }
 /* Footer */
 .site-footer {
   background-color: #2F4858;
   color: #fff;
-  padding: 46px 62px 2em;
+  padding: 46px 62px 2em 62px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-style: normal;
@@ -495,7 +551,10 @@ body {
   position: relative;
 }
 .site-footer .extra-margin {
-  margin: 0 3rem 0 2.8rem;
+  margin: 0 1.5rem;
+}
+.site-footer .col-12 img {
+  margin-bottom: 1.667em;
 }
 .site-footer:before {
   content: "a";
@@ -568,6 +627,25 @@ body {
 .Copyright a {
   color: #fff;
 }
+.Copyright p {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 44px 80px 1em 20px;
+  }
+  .site-footer .row {
+    text-align: left;
+  }
+  .site-footer .SocialMedia img {
+    width: 70%;
+  }
+  .site-footer:before {
+    top: -10px;
+    background-size: cover;
+    background-position: center;
+  }
+}
 @media (max-width: 480px) {
   .site-footer {
     padding: 44px 20px 1em;
@@ -575,26 +653,29 @@ body {
   .site-footer .row {
     text-align: left;
   }
-  .site-footer:before {
-    top: -10px;
-    background-size: contain;
+  .site-footer h1 {
+    font-size: 1.5rem;
+  }
+  .site-footer li {
+    font-size: 12px;
   }
   .site-footer img {
     width: 40%;
+  }
+  .Copyright {
+    font-size: 11px;
   }
   .Copyright .justify-content-end {
     text-align: left;
   }
 }
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 44px 20px 1em;
+@media (min-width: 576px) and (max-width: 768px) {
+  .site-footer img {
+    width: 50%;
   }
-  .site-footer .row {
-    text-align: left;
-  }
-  .site-footer:before {
-    top: -10px;
-    background-size: contain;
+}
+@media (min-width: 1366px) {
+  .site-footer .extra-margin {
+    margin: 0 3rem 0 2.88rem;
   }
 }

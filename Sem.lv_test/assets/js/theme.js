@@ -41,3 +41,15 @@ $('#ScrollButton').click(function(){
         },1000, function() {
           });
 });
+$('.lang-mobile li').click(function(){
+  $('.lang-mobile li').removeClass("active");
+  $(this).addClass("active");
+  var $lang = $.trim($(this).text());
+  $('.lang a').addClass("d-none");
+  $('.lang a').each( function () {
+    if($(this).text() == $lang) {
+      $(this).removeClass("d-none");
+      return;
+    }
+  });
+});
